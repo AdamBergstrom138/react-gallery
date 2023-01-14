@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
 
+import GalleryList from '../GalleryList/GalleryList';
+
 function App() {
   const [trolls, setTrolls] = useState([]);
 
@@ -38,7 +40,8 @@ function App() {
           <h1 className="App-title">Gallery of Trolls</h1>
         </header>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
+        <GalleryList trolls={trolls} />
+        {/* <img src="images/goat_small.jpg"/> */}
       </div>
     );
 }
