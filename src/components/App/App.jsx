@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 function App() {
   const [trolls, setTrolls] = useState([]);
@@ -32,7 +33,7 @@ function App() {
 
 
 
-
+  
     return (
       <div className="App">
         <header className="App-header">
@@ -41,7 +42,6 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <GalleryList trolls={trolls} />
-        {/* <img src="images/goat_small.jpg"/> */}
       </div>
     );
 }

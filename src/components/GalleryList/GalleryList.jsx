@@ -1,18 +1,20 @@
+import GalleryItem from '../GalleryItem/GalleryItem';
+import { useState } from 'react';
 function GalleryList({ trolls }) {
+    // const [trollItem, setTrollItem] = useState([]);
+    //     trolls.map((troll) => {
+    //     setTrollItem(troll);
+    //         return (
+    //         <GalleryItem trollItem={trollItem} />
+    //         )
+    // })
 
     return (
-      <ul>
-        {
-          trolls.map((troll) => {
+        trolls.map((troll) => {
             return (
-              <div key={troll.id}>
-                <img src={troll.path} alt={troll.description}/>
-                {/* {creature.name} is from {creature.origin} */}
-              </div>
+            <GalleryItem troll={troll} key={troll.id} />
             )
-          })
-        }
-      </ul>
+        })
     )
   }
   
