@@ -8,6 +8,7 @@ function GalleryList({ trolls }) {
     //         <GalleryItem trollItem={trollItem} />
     //         )
     // })
+    
 
     return (
         trolls.map((troll) => {

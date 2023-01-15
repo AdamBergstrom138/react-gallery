@@ -5,6 +5,7 @@ import './App.css';
 
 import GalleryList from '../GalleryList/GalleryList';
 import GalleryItem from '../GalleryItem/GalleryItem'; //do I need this?
+import LikeButton from '../LikeButton/LikeButton';
 
 function App() {
   const [trolls, setTrolls] = useState([]);
@@ -42,7 +43,8 @@ function App() {
         </header>
         <p>Gallery goes here</p>
         <div className="grid-container">
-          <GalleryList trolls={trolls} />
+          <GalleryList trolls={trolls} fetchTrolls={fetchTrolls}/>
+          {/* <LikeButton trolls={trolls} fetchTrolls={fetchTrolls} /> */}
         </div>
       </div>
     );
