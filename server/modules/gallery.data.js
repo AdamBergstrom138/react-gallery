@@ -1,3 +1,4 @@
+// galleryItems is our array of troll data
 const galleryItems = [
     { id: 1, path: 'images/troll_green_blue.png', back:'images/blue_yellow.png', name: 'Romeo', description: 'Loves Juliet and a member of the House of Montague', likes: 0 },
     { id: 2, path: 'images/troll_green_red.png', back:'images/black_red.png', name: 'Balthazar', description: 'Romeos manservant.', likes: 0 },
