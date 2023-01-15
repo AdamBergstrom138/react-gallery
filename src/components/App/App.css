@@ -13,6 +13,7 @@
   font-size: 1.5em;
 }
 .grid-container{
+  background-color: rgb(255, 194, 120);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 5px;
@@ -20,9 +21,9 @@
   padding: 5px;
   margin: 10px;
 }
-/* .float-child {
-  width: 50%;
-  float: left;
-  padding: 20px;
-  border: 2px solid black;
-} */
+.App-footer {
+  background-color: #222;
+  padding: 1em;
+  color: white;
+  margin-top: 5em;
+}

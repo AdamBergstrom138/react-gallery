@@ -2,10 +2,9 @@ import React from 'react';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import './App.css';
-
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem'; //do I need this?
-import LikeButton from '../LikeButton/LikeButton';
+import Header from '../Header/Header';
+import Footer from '../Footer/Footer'
 
 function App() {
   const [trolls, setTrolls] = useState([]);
@@ -37,15 +36,13 @@ function App() {
   
     return (
       <div className="App">
-        <header className="App-header">
-          {/* <h1 className="App-title">Gallery of My Life</h1> */}
-          <h1 className="App-title">Gallery of Trolls</h1>
-        </header>
-        <p>Gallery goes here</p>
+        <Header />
+        {/* <p>Gallery goes here</p> */}
         <div className="grid-container">
           <GalleryList trolls={trolls} fetchTrolls={fetchTrolls}/>
           {/* <LikeButton trolls={trolls} fetchTrolls={fetchTrolls} /> */}
         </div>
+        <Footer />
       </div>
     );
 }
