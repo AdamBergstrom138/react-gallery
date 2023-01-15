@@ -3,7 +3,7 @@ import axios from 'axios';
 import './GalleryItem.css';
 import LikeButton from '../LikeButton/LikeButton';
 
-function GalleryItem({troll}){
+function GalleryItem({troll, fetchTrolls}){
     console.log('in gallery item', troll);
     const [isFlipped, setFlipped] = useState(false);
     const toggleFlip = () => {
@@ -15,14 +15,16 @@ function GalleryItem({troll}){
         return (
             <div className="float-child" key={troll.id}>
                 <img src={troll.path} alt={troll.description} onClick={toggleFlip} /> 
-                <LikeButton troll={troll} />
+                <p><LikeButton troll={troll} fetchTrolls={fetchTrolls}/></p>
+                <p>Likes {troll.likes}</p>
             </div>
         )
         }else{
             return(
                 <div className="float-child" key={troll.id}> 
                     <p onClick={toggleFlip}>{troll.description}</p>
-                    <LikeButton troll={troll} />
+                    <p><LikeButton troll={troll} fetchTrolls={fetchTrolls}/></p>
+                    <p>Likes {troll.likes}</p>
                 </div>
             )
         }

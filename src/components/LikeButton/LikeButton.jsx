@@ -5,14 +5,15 @@ import axios from 'axios';
 function LikeButton ({ troll, fetchTrolls}) {
     const handleLike = (event) => {
         event.preventDefault();
-        putList({troll});
+        console.log('clicked like');
+        putLike({troll});
     }
     
     //put request
     const putLike = ({troll}) => {
         console.log(troll.id);
         //try to insert id into url?
-        axios.put(`/like/${troll.id}`)
+        axios.put(`/gallery/like/${troll.id}`)
         .then(response => {
             fetchTrolls();
         })
@@ -26,27 +27,11 @@ function LikeButton ({ troll, fetchTrolls}) {
       
       }
     
-    return (
-
-       
-       <button type="submit"
-       onSubmit={handleLike}
-       >
-        Like
-       </button>
-        // <Button 
-        // onClick={handleLike}
-        //  sx={{ 
-        //     width: "max-content", 
-        //     color: "#fff"
-        //     }}
-        // >
-        //     Like
-        // </Button>
-
-
-    )
-    
+    return ( 
+        <button type="button" onClick={handleLike}>
+            Like
+        </button>
+        )
     }
     
     export default LikeButton;

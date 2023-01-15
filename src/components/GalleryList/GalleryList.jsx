@@ -1,6 +1,6 @@
 import GalleryItem from '../GalleryItem/GalleryItem';
 import { useState } from 'react';
-function GalleryList({ trolls }) {
+function GalleryList({ trolls, fetchTrolls }) {
     // const [trollItem, setTrollItem] = useState([]);
     //     trolls.map((troll) => {
     //     setTrollItem(troll);
@@ -13,7 +13,7 @@ function GalleryList({ trolls }) {
     return (
         trolls.map((troll) => {
             return (
-            <GalleryItem troll={troll} key={troll.id} />
+            <GalleryItem troll={troll} key={troll.id} fetchTrolls={fetchTrolls}/>
             )
         })
     )
