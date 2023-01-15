@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 
 import GalleryList from '../GalleryList/GalleryList';
-import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryItem from '../GalleryItem/GalleryItem'; //do I need this?
 
 function App() {
   const [trolls, setTrolls] = useState([]);
@@ -41,7 +41,9 @@ function App() {
           <h1 className="App-title">Gallery of Trolls</h1>
         </header>
         <p>Gallery goes here</p>
-        <GalleryList trolls={trolls} />
+        <div className="grid-container">
+          <GalleryList trolls={trolls} />
+        </div>
       </div>
     );
 }

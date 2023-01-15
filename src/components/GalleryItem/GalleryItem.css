@@ -1,0 +1,7 @@
+.float-child {
+    width: 75%;
+    float: left;
+    padding: 5px;
+    border: 2px solid black;
+    background-color: rgb(144, 144, 201);
+}

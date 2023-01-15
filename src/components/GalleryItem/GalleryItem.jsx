@@ -1,8 +1,8 @@
-import GalleryList from "../GalleryList/GalleryList";
+import './GalleryItem.css';
 function GalleryItem({troll}){
     console.log('in gallery item', troll);
     return (
-                <div key={troll.id}>
+                <div className="float-child" key={troll.id}>
                   <img src={troll.path} alt={troll.description}/> 
                 </div>
       )
