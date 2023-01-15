@@ -7,13 +7,14 @@ function GalleryItem({troll, fetchTrolls}){
     console.log('in gallery item', troll);
     const [isFlipped, setFlipped] = useState(false);
     const toggleFlip = () => {
-        console.log('flipping');
+        console.log('flipping', troll.id);
         setFlipped(!isFlipped);
     }
 
     if (isFlipped === false){
         return (
             <div className="float-child" key={troll.id}>
+                <p className="name">{troll.name}</p>
                 <img src={troll.path} alt={troll.description} onClick={toggleFlip} /> 
                 <p><LikeButton troll={troll} fetchTrolls={fetchTrolls}/></p>
                 <p>Likes {troll.likes}</p>
@@ -22,7 +23,12 @@ function GalleryItem({troll, fetchTrolls}){
         }else{
             return(
                 <div className="float-child" key={troll.id}> 
-                    <p onClick={toggleFlip}>{troll.description}</p>
+                    <p className='name'>{troll.name}</p>
+                    <img src={troll.back} alt={troll.description} onClick={toggleFlip} />
+                    {/* <p onClick={toggleFlip}>{troll.description}</p> */} 
+                    {/* I commented out the above line because I put the description 
+                    in the back image.  Uncomment the above line if you want the description
+                    to show up under the image as well */}
                     <p><LikeButton troll={troll} fetchTrolls={fetchTrolls}/></p>
                     <p>Likes {troll.likes}</p>
                 </div>

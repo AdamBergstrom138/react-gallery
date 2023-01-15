@@ -3,9 +3,13 @@
     float: left;
     padding: 5px;
     border: 2px solid black;
+    border-radius: 5%;
     background-color: rgb(144, 144, 201);
     margin-left: 5em;
 }
 img {
     border: 2px solid black; 
+}
+.name {
+    font-weight: bold;
 }

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import axios from 'axios';
 
-
 function LikeButton ({ troll, fetchTrolls}) {
     const handleLike = (event) => {
         event.preventDefault();
@@ -9,10 +8,8 @@ function LikeButton ({ troll, fetchTrolls}) {
         putLike({troll});
     }
     
-    //put request
     const putLike = ({troll}) => {
-        console.log(troll.id);
-        //try to insert id into url?
+        console.log('you liked troll', troll.id);
         axios.put(`/gallery/like/${troll.id}`)
         .then(response => {
             fetchTrolls();
@@ -22,10 +19,6 @@ function LikeButton ({ troll, fetchTrolls}) {
             console.log(err);
         })
     }
-    const handleSubmit = (event) => {
-        event.preventDefault();
-      
-      }
     
     return ( 
         <button type="button" onClick={handleLike}>
